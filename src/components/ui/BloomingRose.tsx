@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInViewport } from '@/hooks/useInViewport';
-import { useSound } from '@/context/SoundContext';
 
 interface BloomingRoseProps {
   className?: string;
@@ -11,11 +10,9 @@ interface BloomingRoseProps {
 export const BloomingRose: React.FC<BloomingRoseProps> = ({ className = '', label }) => {
   const [containerRef, isInView] = useInViewport<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
   const [isBloomed, setIsBloomed] = useState(false);
-  const { playTap } = useSound();
 
   const handleRoseTap = () => {
     setIsBloomed(!isBloomed);
-    playTap();
   };
 
   return (
@@ -104,7 +101,7 @@ export const BloomingRose: React.FC<BloomingRoseProps> = ({ className = '', labe
       </div>
 
       {label && (
-        <span className="text-[11px] text-emerald-300/60 font-mada mt-1 tracking-wide">
+        <span className="text-[11px] text-emerald-300/60 font-cairo mt-1 tracking-wide">
           {label}
         </span>
       )}

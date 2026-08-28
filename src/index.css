@@ -1,53 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --font-reem: "Reem Kufi", sans-serif;
-  --font-mada: "Mada", sans-serif;
-  --font-aref: "Aref Ruqaa", serif;
-  --font-changa: "Changa", sans-serif;
   --font-cairo: "Cairo", sans-serif;
-  --font-lemonada: "Lemonada", cursive;
   --font-amiri: "Amiri", serif;
+  --font-aref: "Aref Ruqaa", serif;
 
-  --color-jungle-dark: #04120a;
-  --color-jungle-mid: #0a2618;
-  --color-jungle-accent: #10b981;
-  --color-jungle-gold: #f59e0b;
+  --color-waterfall-dark: #03131c;
+  --color-waterfall-mid: #052230;
+  --color-waterfall-accent: #0ea5e9;
 
-  --color-desert-dark: #1f100a;
-  --color-desert-amber: #d97706;
-  --color-desert-sand: #fef3c7;
-  --color-desert-petra: #b45309;
+  --color-iris-dark: #11051c;
+  --color-iris-mid: #1a082b;
+  --color-iris-accent: #a855f7;
 
-  --color-beach-deep: #032030;
-  --color-beach-ocean: #0284c7;
-  --color-beach-foam: #e0f2fe;
-  --color-beach-sand: #fcd34d;
+  --color-beach-dark: #1f0b04;
+  --color-beach-mid: #1a0f18;
+  --color-beach-accent: #f59e0b;
 
-  --color-mountain-night: #0b0f19;
-  --color-mountain-slate: #334155;
-  --color-mountain-glow: #38bdf8;
-  --color-mountain-road: #1e293b;
-
-  --color-timeline-dark: #09130e;
-  --color-timeline-vine: #059669;
-  --color-timeline-gold: #fbbf24;
+  --color-memories-dark: #140f0c;
+  --color-memories-mid: #1c1410;
+  --color-memories-accent: #eab308;
 }
 
 /* Custom Typography Utilities */
-.font-reem { font-family: var(--font-reem), sans-serif; }
-.font-mada { font-family: var(--font-mada), sans-serif; }
-.font-aref { font-family: var(--font-aref), serif; }
-.font-changa { font-family: var(--font-changa), sans-serif; }
 .font-cairo { font-family: var(--font-cairo), sans-serif; }
-.font-lemonada { font-family: var(--font-lemonada), cursive; }
 .font-amiri { font-family: var(--font-amiri), serif; }
+.font-aref { font-family: var(--font-aref), serif; }
 
 /* Base App Layout */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #060d09;
+  background-color: #050d09;
   color: #f0fdf4;
   font-family: var(--font-cairo), sans-serif;
   overflow-x: hidden;
@@ -63,7 +47,7 @@ html, body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: #04120a;
@@ -76,99 +60,36 @@ html, body {
   background: #34d399;
 }
 
-/* Keyframe Animations */
-@keyframes treeSway {
-  0%, 100% {
-    transform: rotate(0deg) translateX(0);
-  }
-  25% {
-    transform: rotate(-1.5deg) translateX(-3px);
-  }
-  75% {
-    transform: rotate(1.5deg) translateX(3px);
-  }
-}
-
-@keyframes leafDrift {
+/* Pure CSS Keyframe Animations (Optimized for Samsung Galaxy A13) */
+@keyframes fallingPetal {
   0% {
-    transform: translateY(-5vh) translateX(0) rotate(0deg);
+    transform: translateY(-20px) translateX(0) rotate(0deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.9;
-  }
-  25% {
-    transform: translateY(25vh) translateX(18px) rotate(90deg);
+  15% {
+    opacity: 0.85;
   }
   50% {
-    transform: translateY(50vh) translateX(-12px) rotate(180deg);
+    transform: translateY(50vh) translateX(25px) rotate(180deg);
   }
-  75% {
-    transform: translateY(75vh) translateX(22px) rotate(270deg);
-  }
-  90% {
-    opacity: 0.7;
+  85% {
+    opacity: 0.65;
   }
   100% {
-    transform: translateY(110vh) translateX(6px) rotate(360deg);
+    transform: translateY(105vh) translateX(-20px) rotate(360deg);
     opacity: 0;
   }
 }
 
-@keyframes vineDraw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes mistDrift {
-  0%, 100% {
-    transform: translateX(-4%) translateY(0);
-    opacity: 0.35;
+@keyframes waveRoll {
+  0% {
+    transform: translateX(0) scaleY(1);
   }
   50% {
-    transform: translateX(4%) translateY(-6px);
-    opacity: 0.55;
+    transform: translateX(-25%) scaleY(1.08);
   }
-}
-
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4), 0 0 24px rgba(245, 158, 11, 0.2);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.7), 0 0 36px rgba(245, 158, 11, 0.4);
-    transform: scale(1.05);
-  }
-}
-
-@keyframes carBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-}
-
-@keyframes starTwinkle {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(0.85);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
+  100% {
+    transform: translateX(-50%) scaleY(1);
   }
 }
 
@@ -177,52 +98,26 @@ html, body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-2deg);
+    transform: rotate(-2.5deg);
   }
 }
 
-.animate-tree-sway {
-  animation: treeSway 8s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-.animate-palm-sway {
-  animation: palmSway 6s ease-in-out infinite;
-  transform-origin: bottom center;
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .animate-float {
   animation: floatSlow 4s ease-in-out infinite;
 }
 
-.animate-mist {
-  animation: mistDrift 16s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-.animate-car-bounce {
-  animation: carBounce 0.4s ease-in-out infinite;
-}
-
-.animate-star-twinkle {
-  animation: starTwinkle 2.5s ease-in-out infinite;
-}
-
-/* Glassmorphic & Texture Styles */
-.glass-panel {
-  background: rgba(8, 28, 18, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.parchment-panel {
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f59e0b 100%);
-  color: #451a03;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(180, 83, 9, 0.2);
+.animate-palm-sway {
+  animation: palmSway 5s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
 /* Reduced Motion contract */
@@ -233,13 +128,8 @@ html, body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .animate-tree-sway,
-  .animate-palm-sway,
   .animate-float,
-  .animate-mist,
-  .animate-pulse-glow,
-  .animate-car-bounce,
-  .animate-star-twinkle {
+  .animate-palm-sway {
     animation: none !important;
   }
 }
