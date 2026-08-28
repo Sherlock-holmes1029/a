@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+@theme {
+  --font-reem: "Reem Kufi", sans-serif;
+  --font-mada: "Mada", sans-serif;
+  --font-aref: "Aref Ruqaa", serif;
+  --font-changa: "Changa", sans-serif;
+  --font-cairo: "Cairo", sans-serif;
+  --font-lemonada: "Lemonada", cursive;
+  --font-amiri: "Amiri", serif;
+
+  --color-jungle-dark: #04120a;
+  --color-jungle-mid: #0a2618;
+  --color-jungle-accent: #10b981;
+  --color-jungle-gold: #f59e0b;
+
+  --color-desert-dark: #1f100a;
+  --color-desert-amber: #d97706;
+  --color-desert-sand: #fef3c7;
+  --color-desert-petra: #b45309;
+
+  --color-beach-deep: #032030;
+  --color-beach-ocean: #0284c7;
+  --color-beach-foam: #e0f2fe;
+  --color-beach-sand: #fcd34d;
+
+  --color-mountain-night: #0b0f19;
+  --color-mountain-slate: #334155;
+  --color-mountain-glow: #38bdf8;
+  --color-mountain-road: #1e293b;
+
+  --color-timeline-dark: #09130e;
+  --color-timeline-vine: #059669;
+  --color-timeline-gold: #fbbf24;
+}
+
+/* Custom Typography Utilities */
+.font-reem { font-family: var(--font-reem), sans-serif; }
+.font-mada { font-family: var(--font-mada), sans-serif; }
+.font-aref { font-family: var(--font-aref), serif; }
+.font-changa { font-family: var(--font-changa), sans-serif; }
+.font-cairo { font-family: var(--font-cairo), sans-serif; }
+.font-lemonada { font-family: var(--font-lemonada), cursive; }
+.font-amiri { font-family: var(--font-amiri), serif; }
+
+/* Base App Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #060d09;
+  color: #f0fdf4;
+  font-family: var(--font-cairo), sans-serif;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #04120a;
+}
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34d399;
+}
+
+/* Keyframe Animations */
+@keyframes treeSway {
+  0%, 100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-1.5deg) translateX(-3px);
+  }
+  75% {
+    transform: rotate(1.5deg) translateX(3px);
+  }
+}
+
+@keyframes leafDrift {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  25% {
+    transform: translateY(25vh) translateX(18px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-12px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(22px) rotate(270deg);
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) translateX(6px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes vineDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mistDrift {
+  0%, 100% {
+    transform: translateX(-4%) translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(4%) translateY(-6px);
+    opacity: 0.55;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4), 0 0 24px rgba(245, 158, 11, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.7), 0 0 36px rgba(245, 158, 11, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes carBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes palmSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-tree-sway {
+  animation: treeSway 8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-palm-sway {
+  animation: palmSway 6s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-mist {
+  animation: mistDrift 16s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-car-bounce {
+  animation: carBounce 0.4s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle 2.5s ease-in-out infinite;
+}
+
+/* Glassmorphic & Texture Styles */
+.glass-panel {
+  background: rgba(8, 28, 18, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.parchment-panel {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f59e0b 100%);
+  color: #451a03;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(180, 83, 9, 0.2);
+}
+
+/* Reduced Motion contract */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-tree-sway,
+  .animate-palm-sway,
+  .animate-float,
+  .animate-mist,
+  .animate-pulse-glow,
+  .animate-car-bounce,
+  .animate-star-twinkle {
+    animation: none !important;
+  }
+}
