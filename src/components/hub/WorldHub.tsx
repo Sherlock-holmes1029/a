@@ -82,7 +82,7 @@ export const WorldHub: React.FC = () => {
         </div>
 
         {/* 2x2 World Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
           {WORLDS.map((world: WorldDef, index: number) => (
             <motion.div
               key={world.id}
@@ -92,31 +92,39 @@ export const WorldHub: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigateToWorld(world.id)}
-              className="group relative rounded-3xl overflow-hidden p-6 sm:p-7 bg-[#0b1c12]/80 border-2 border-emerald-500/30 hover:border-emerald-400/70 backdrop-blur-md shadow-2xl shadow-black/50 cursor-pointer transition-all duration-300 text-right flex flex-col justify-between min-h-[170px]"
+              className="group relative rounded-3xl overflow-hidden p-6 sm:p-7 bg-black/25 border-2 border-emerald-500/30 hover:border-emerald-400/80 shadow-2xl shadow-black/60 cursor-pointer transition-all duration-500 text-right flex flex-col justify-between min-h-[190px] sm:min-h-[210px]"
             >
-              {/* Subtle dynamic background gradient on card hover */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${world.gradient} opacity-30 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none`}
-              />
+              {/* Background Cover Image with Full Vibrancy and Minimal Right Fog */}
+              {world.coverImage && (
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src={world.coverImage}
+                    alt={world.nameAr}
+                    className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-108 transition-transform duration-700 ease-out opacity-95 group-hover:opacity-100"
+                  />
+                  {/* Ultra-light soft gradient on the right text edge only */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/15 to-transparent" />
+                </div>
+              )}
 
               <div className="relative z-10 flex items-start justify-between">
-                <span className="text-4xl sm:text-5xl drop-shadow-md group-hover:scale-110 transition-transform duration-300">
+                <span className="text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] group-hover:scale-110 transition-transform duration-300">
                   {world.icon}
                 </span>
 
-                <div className="p-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 group-hover:bg-emerald-500 group-hover:text-stone-950 transition-colors">
+                <div className="p-2.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 group-hover:bg-emerald-500 group-hover:text-stone-950 group-hover:scale-110 transition-all duration-300 shadow-md backdrop-blur-md">
                   <ArrowLeft className="w-4 h-4" />
                 </div>
               </div>
 
-              <div className="relative z-10 mt-4">
-                <span className="text-[11px] font-bold font-cairo text-emerald-400/80 block mb-0.5">
+              <div className="relative z-10 mt-6">
+                <span className="text-[11px] font-bold font-cairo text-emerald-400/90 block mb-1 tracking-wider uppercase drop-shadow-sm">
                   {world.nameEn}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold font-aref text-emerald-100 group-hover:text-amber-200 transition-colors mb-1">
+                <h3 className="text-xl sm:text-2xl font-bold font-aref text-emerald-50 group-hover:text-amber-200 transition-colors mb-1.5 drop-shadow-md">
                   {world.nameAr}
                 </h3>
-                <p className="text-xs font-cairo text-emerald-300/80 leading-relaxed">
+                <p className="text-xs sm:text-sm font-cairo text-emerald-200/85 leading-relaxed drop-shadow-sm">
                   {world.description}
                 </p>
               </div>

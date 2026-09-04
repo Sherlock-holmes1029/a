@@ -48,8 +48,8 @@ export const CountdownScreen: React.FC = () => {
       {/* 2. Main Countdown Card */}
       <main className="relative z-20 max-w-lg mx-auto my-auto py-8 flex flex-col items-center">
         {/* Ambient blooming geometric flower from CodePen 1 */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-25 z-0">
-          <BloomingFlower size={260} speedMs={2200} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30 z-0">
+          <BloomingFlower size={380} palette="rose" animationSpeed={100} delayMs={400} />
         </div>
 
         {/* Poetic Badge */}

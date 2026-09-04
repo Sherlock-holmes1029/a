@@ -66,9 +66,9 @@ export const BlackIrisWorld: React.FC = () => {
             رمز الأصالة والجمال النادر.. حيث تلتقي روائع تميم البرغوثي "في القدس" بفروسية عنترة ونقاء السوسنة البرية.
           </p>
 
-          {/* Animated Botanical Illustration Frame from CodePen 4 */}
-          <div className="w-full max-w-md mx-auto my-4 opacity-75">
-            <BotanicalFrame />
+          {/* Animated Botanical Illustration Frame from CodePen */}
+          <div className="w-full max-w-lg mx-auto my-4 opacity-90 hover:opacity-100 transition-opacity">
+            <BotanicalFrame sizeClassName="max-w-[420px] sm:max-w-[520px]" />
           </div>
         </div>
 

@@ -7,56 +7,66 @@ import { PolaroidPhoto, type MemoryPhotoItem } from '@/components/ui/PolaroidPho
 import { ArrowRight, Sparkles, Gamepad2, Palette, Heart, Image as ImageIcon } from 'lucide-react';
 
 export const MemoriesWorld: React.FC = () => {
-  const { returnToHub } = useApp();
+  const { returnToHub, navigateToWorld } = useApp();
   const poems = getPoemsByWorld('memories');
-  const [activeTab, setActiveTab] = useState<'all' | 'pubg' | 'pixel-art'>('all');
+  const [activeTab, _setActiveTab] = useState<'all' | 'pubg' | 'pixel-art'>('all');
 
-  /*
-   * 📸 PHOTO GALLERY DATA PLACEHOLDERS
-   * To add your actual photos:
-   * 1. Place your image files inside the `/public/photos/` directory (e.g., `pubg_win.png`)
-   * 2. Add `src: '/photos/pubg_win.png'` to the objects below!
-   */
   const memoryPhotos: MemoryPhotoItem[] = [
     {
       id: 'photo-pubg-1',
-      title: 'عشاء الدجاج الأول 🏆',
-      caption: 'حين فزنا معاً بعد جولة ملحمية مليئة بالضحك والمحاولات المجنونة.',
+      title: 'عشاء الدجاج الأول 🏆 Winner Winner',
+      caption: 'حين فزنا معاً بعد جولة ملحمية مليئة بالضحك والتنسيق والتوتر عند الدائرة الأخيرة!',
       category: 'pubg',
       symbol: '🍗',
-      // src: '/photos/pubg_win_1.png', // <-- REPLACE HERE WITH YOUR IMAGE PATH
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.52 AM.jpeg',
     },
     {
       id: 'photo-pixel-1',
-      title: 'لوحة البكسل الأولى 🎨',
-      caption: 'حين رسمنا الذكرى بكسلاً بكسل، بألوان دافئة تحكي حكايتنا.',
+      title: 'قلب البكسل الوردي 💖 8-Bit Love',
+      caption: 'رسمة ناعمة منسوجة مربعاً مربعاً، ترمز لكل التفاصيل الصغيرة الجميلة المشتركة بيننا.',
       category: 'pixel-art',
       symbol: '👾',
-      // src: '/photos/pixel_art_1.png', // <-- REPLACE HERE WITH YOUR IMAGE PATH
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM.jpeg',
     },
     {
       id: 'photo-pubg-2',
-      title: 'إنقاذ تحت النار 🔫',
-      caption: 'لأنكِ دائماً في ظهري، ولأننا فريق لا يُقهر مهما اشتدت المعركة.',
+      title: 'إنقاذ وتغطية تحت النيران 🛡️',
+      caption: 'سحب سموكات وتغطية حاسمة.. لأننا لا نترك بعضنا خلفنا مهما اشتدت المعركة!',
       category: 'pubg',
-      symbol: '🛡️',
-      // src: '/photos/pubg_revive.png', // <-- REPLACE HERE WITH YOUR IMAGE PATH
+      symbol: '🔫',
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (1).jpeg',
     },
     {
       id: 'photo-pixel-2',
-      title: 'قلب البكسل الوردي 💖',
-      caption: 'رمز صغير لكل لحظة شاركنا فيها التفاصيل الصغيرة الجميلة.',
+      title: 'شخصية البكسل اللطيفة 🌸',
+      caption: 'أفاتار لطيف بتدرجات بكسلية ساحرة يذكرنا بلحظات الألعاب وساعات السمر الجميلة.',
       category: 'pixel-art',
-      symbol: '🌸',
-      // src: '/photos/pixel_heart.png', // <-- REPLACE HERE WITH YOUR IMAGE PATH
+      symbol: '🎮',
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (2).jpeg',
     },
     {
-      id: 'photo-special-1',
-      title: 'أحلى اللحظات المشتركة 🧸',
-      caption: 'ذكريات لا تُمحى، محفورة في القلب قبل الشاشات.',
-      category: 'special',
+      id: 'photo-pubg-3',
+      title: 'سهرة اللوبي والدردشة 🧸',
+      caption: 'أحاديث ما بعد الجولات، والضحكات العفوية التي تدوم حتى ساعات الفجر الأولى.',
+      category: 'pubg',
       symbol: '✨',
-      // src: '/photos/special_moment.png', // <-- REPLACE HERE WITH YOUR IMAGE PATH
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (3).jpeg',
+    },
+    {
+      id: 'photo-pubg-4',
+      title: 'وسام الثنائي الأسطوري 🎖️',
+      caption: 'تتويج الشراكة واللعب الجماعي الممتع؛ معاً نكون دائماً الفريق الذي لا يُقهر.',
+      category: 'pubg',
+      symbol: '🔥',
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.54 AM (1).jpeg',
+    },
+    {
+      id: 'photo-pixel-3',
+      title: 'عالم البكسل الملون 🌈',
+      caption: 'تناغم لوني بكسلي دافئ يوثق شغفنا المشترك بالألعاب الكلاسيكية وعوالم الفن الرقمي.',
+      category: 'pixel-art',
+      symbol: '🎨',
+      src: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.54 AM (2).jpeg',
     },
   ];
 
@@ -107,9 +117,18 @@ export const MemoriesWorld: React.FC = () => {
             عالم الذكريات الخالدة 🎮
           </h1>
 
-          <p className="text-sm sm:text-base font-amiri text-stone-300/90 max-w-lg mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base font-amiri text-stone-300/90 max-w-lg mx-auto leading-relaxed mb-4">
             ألبوم صور بولارويد لانتصاراتنا في PUBG وإبداعات البكسل آرت، محاطة بأصدق قصائد الوفاء والعهد.
           </p>
+
+          <button
+            type="button"
+            onClick={() => navigateToWorld('atelier')}
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-[#422513] via-[#5c371d] to-[#361c0c] border-2 border-amber-500/60 text-amber-100 text-xs sm:text-sm font-cairo font-bold shadow-xl hover:shadow-amber-500/20 hover:scale-105 transition-all cursor-pointer"
+          >
+            <Palette className="w-4 h-4 text-amber-400" />
+            <span>استكشاف مرسم وأتيليه أماني ثلاثي الأبعاد 🎨</span>
+          </button>
         </div>
 
         {/* SECTION 1: PHOTO GALLERY */}
@@ -123,7 +142,7 @@ export const MemoriesWorld: React.FC = () => {
             </div>
 
             {/* Gallery Category Filter Tabs */}
-            <div className="flex items-center gap-1.5 p-1 rounded-full bg-stone-900 border border-stone-800 text-xs font-cairo">
+            {/* <div className="flex items-center gap-1.5 p-1 rounded-full bg-stone-900 border border-stone-800 text-xs font-cairo">
               <button
                 type="button"
                 onClick={() => setActiveTab('all')}
@@ -159,7 +178,7 @@ export const MemoriesWorld: React.FC = () => {
                 <Palette className="w-3 h-3" />
                 <span>Pixel Art</span>
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Polaroid Masonry / Flex Grid */}

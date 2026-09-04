@@ -94,8 +94,8 @@ export const LoginScreen: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="flex flex-col items-center justify-center py-4"
             >
-              <div className="relative my-2">
-                <BloomingFlower size={160} speedMs={1400} />
+              <div className="relative my-2 flex items-center justify-center">
+                <BloomingFlower size={200} palette="rose" animationSpeed={120} delayMs={100} />
               </div>
               <BloomingRose label="أهلاً بكِ في عوالمكِ الخاصة 🌿" />
               <span className="text-xs font-bold font-cairo text-emerald-300 mt-2">

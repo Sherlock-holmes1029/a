@@ -24,7 +24,7 @@ export const DEV_AUTO_UNLOCK =
   import.meta.env.VITE_DEV_AUTO_UNLOCK === 'true' ||
   import.meta.env.VITE_DEV_AUTO_UNLOCK === true;
 
-export type WorldId = 'waterfall' | 'black-iris' | 'beach' | 'memories';
+export type WorldId = 'waterfall' | 'black-iris' | 'beach' | 'memories' | 'atelier';
 
 export interface WorldDef {
   id: WorldId;
@@ -33,9 +33,19 @@ export interface WorldDef {
   icon: string;
   gradient: string;
   description: string;
+  coverImage?: string;
 }
 
 export const WORLDS: WorldDef[] = [
+  {
+    id: 'atelier',
+    nameAr: 'أتيليه الذكريات والمرسم',
+    nameEn: 'Atelier & Art Sanctuary',
+    icon: '🎨',
+    gradient: 'from-amber-950 via-stone-900 to-amber-900',
+    description: 'لوحات الغد، أعمالها الفنية، ومعارك البكسل في مرسم ثلاثي الأبعاد',
+    coverImage: '/assets/A project/a/draw 1.png',
+  },
   {
     id: 'waterfall',
     nameAr: 'عالم الشلالات',
@@ -43,6 +53,7 @@ export const WORLDS: WorldDef[] = [
     icon: '💧',
     gradient: 'from-cyan-950 via-sky-900 to-teal-950',
     description: 'قصائد الشوق والدموع المتدفقة',
+    coverImage: '/images/worlds/waterfall.jpg',
   },
   {
     id: 'black-iris',
@@ -51,6 +62,7 @@ export const WORLDS: WorldDef[] = [
     icon: '🖤',
     gradient: 'from-purple-950 via-indigo-950 to-slate-950',
     description: 'قصائد الجمال النادر والوطن',
+    coverImage: '/images/worlds/black-iris.jpg',
   },
   {
     id: 'beach',
@@ -59,6 +71,7 @@ export const WORLDS: WorldDef[] = [
     icon: '🌊',
     gradient: 'from-amber-900 via-orange-950 to-sky-950',
     description: 'قصائد الأفق واللقاء',
+    coverImage: '/images/worlds/beach.jpg',
   },
   {
     id: 'memories',
@@ -67,5 +80,7 @@ export const WORLDS: WorldDef[] = [
     icon: '🎮',
     gradient: 'from-stone-950 via-amber-950 to-stone-900',
     description: 'ذكرياتنا في PUBG والبكسل آرت',
+    coverImage: '/images/worlds/memories.jpg',
   },
 ];
+
