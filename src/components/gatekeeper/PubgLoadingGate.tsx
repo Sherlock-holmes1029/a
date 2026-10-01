@@ -342,44 +342,44 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
         }
         className="absolute left-0 top-0 w-[24vw] h-full z-30 shadow-[8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
         style={{
-          background: 'linear-gradient(90deg, #10161e 0%, #1a2430 65%, #243444 100%)',
+          backgroundColor: '#314056',
         }}
       >
         {/* Top Hazard Tape */}
         <div
-          className="w-full h-3 sm:h-4 border-b border-black/60 shrink-0"
+          className="w-full h-3 sm:h-4 border-b border-black/40 shrink-0"
           style={{
             background:
-              'repeating-linear-gradient(-45deg, #dca827 0, #dca827 8px, #16202b 8px, #16202b 16px)',
+              'repeating-linear-gradient(-45deg, #dca827 0, #dca827 8px, #314056 8px, #314056 16px)',
           }}
         />
 
         {/* Center Section: Embedded left.png image, anchored flush to the inner (right) edge */}
-        <div className="relative flex-1 w-full flex items-center justify-end overflow-hidden">
+        <div className="relative flex-1 w-full flex items-center justify-end overflow-hidden bg-[#314056]">
           {/* Rivets column along left edge */}
           <div className="absolute left-1.5 sm:left-3 inset-y-4 flex flex-col justify-around items-center pointer-events-none z-10">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-400 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.4),0_1px_2px_rgba(0,0,0,0.8)] border border-slate-600"
+                className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-300 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.4),0_1px_2px_rgba(0,0,0,0.8)] border border-slate-600"
               />
             ))}
           </div>
 
-          {/* Left Door Image: Scaled naturally to fit height & anchored right */}
+          {/* Left Door Image: Scaled naturally to fit height & anchored right with seamless color */}
           <img
             src={leftGateImg}
             alt="PUBG Gate Left"
-            className="h-full max-h-[500px] w-auto object-contain object-right block select-none pointer-events-none drop-shadow-[2px_0_4px_rgba(0,0,0,0.5)]"
+            className="h-full max-h-[500px] w-auto object-contain object-right block select-none pointer-events-none"
           />
         </div>
 
         {/* Bottom Hazard Tape */}
         <div
-          className="w-full h-3 sm:h-4 border-t border-black/60 shrink-0"
+          className="w-full h-3 sm:h-4 border-t border-black/40 shrink-0"
           style={{
             background:
-              'repeating-linear-gradient(45deg, #dca827 0, #dca827 8px, #16202b 8px, #16202b 16px)',
+              'repeating-linear-gradient(45deg, #dca827 0, #dca827 8px, #314056 8px, #314056 16px)',
           }}
         />
       </motion.div>
@@ -397,44 +397,44 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
         }
         className="absolute right-0 top-0 w-[24vw] h-full z-30 shadow-[-8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
         style={{
-          background: 'linear-gradient(270deg, #10161e 0%, #1a2430 65%, #243444 100%)',
+          backgroundColor: '#314056',
         }}
       >
         {/* Top Hazard Tape */}
         <div
-          className="w-full h-3 sm:h-4 border-b border-black/60 shrink-0"
+          className="w-full h-3 sm:h-4 border-b border-black/40 shrink-0"
           style={{
             background:
-              'repeating-linear-gradient(45deg, #dca827 0, #dca827 8px, #16202b 8px, #16202b 16px)',
+              'repeating-linear-gradient(45deg, #dca827 0, #dca827 8px, #314056 8px, #314056 16px)',
           }}
         />
 
         {/* Center Section: Embedded right.png image, anchored flush to the inner (left) edge */}
-        <div className="relative flex-1 w-full flex items-center justify-start overflow-hidden">
+        <div className="relative flex-1 w-full flex items-center justify-start overflow-hidden bg-[#314056]">
           {/* Rivets column along right edge */}
           <div className="absolute right-1.5 sm:right-3 inset-y-4 flex flex-col justify-around items-center pointer-events-none z-10">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-400 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.4),0_1px_2px_rgba(0,0,0,0.8)] border border-slate-600"
+                className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-300 shadow-[inset_1px_1px_1px_rgba(255,255,255,0.4),0_1px_2px_rgba(0,0,0,0.8)] border border-slate-600"
               />
             ))}
           </div>
 
-          {/* Right Door Image: Scaled naturally to fit height & anchored left */}
+          {/* Right Door Image: Scaled naturally to fit height & anchored left with seamless color */}
           <img
             src={rightGateImg}
             alt="PUBG Gate Right"
-            className="h-full max-h-[500px] w-auto object-contain object-left block select-none pointer-events-none drop-shadow-[-2px_0_4px_rgba(0,0,0,0.5)]"
+            className="h-full max-h-[500px] w-auto object-contain object-left block select-none pointer-events-none"
           />
         </div>
 
         {/* Bottom Hazard Tape */}
         <div
-          className="w-full h-3 sm:h-4 border-t border-black/60 shrink-0"
+          className="w-full h-3 sm:h-4 border-t border-black/40 shrink-0"
           style={{
             background:
-              'repeating-linear-gradient(-45deg, #dca827 0, #dca827 8px, #16202b 8px, #16202b 16px)',
+              'repeating-linear-gradient(-45deg, #dca827 0, #dca827 8px, #314056 8px, #314056 16px)',
           }}
         />
       </motion.div>
