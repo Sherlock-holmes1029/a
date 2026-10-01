@@ -176,7 +176,11 @@ export const LoginScreen: React.FC = () => {
       {showPubgGate && (
         <PubgLoadingGate
           playerName="أماني 💕"
+          onClose={() => {
+            setShowPubgGate(false);
+          }}
           onComplete={() => {
+            setShowPubgGate(false);
             unlock();
           }}
         />
