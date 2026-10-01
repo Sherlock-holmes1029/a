@@ -4,7 +4,6 @@ import { useApp } from '@/context/AppContext';
 import { DEV_BYPASS_COUNTDOWN } from '@/data/config';
 import { FallingPetals } from '@/components/effects/FallingPetals';
 import { BloomingFlower } from '@/components/effects/BloomingFlower';
-import { SecretArcadeLink } from '@/components/ui/SecretArcadeLink';
 import { Sparkles, Heart, Clock, ArrowLeft, Wrench } from 'lucide-react';
 
 export const CountdownScreen: React.FC = () => {
@@ -141,12 +140,9 @@ export const CountdownScreen: React.FC = () => {
       </main>
 
       {/* 3. Footer */}
-      <footer className="relative z-20 flex flex-col items-center gap-3 pb-4 text-xs font-cairo text-emerald-400/70">
-        <div className="flex items-center gap-2">
-          <Clock className="w-3.5 h-3.5 text-amber-400" />
-          <span>بانتظار لحظة الاكتمال...</span>
-        </div>
-        <SecretArcadeLink />
+      <footer className="relative z-20 flex items-center gap-2 pb-4 text-xs font-cairo text-emerald-400/70">
+        <Clock className="w-3.5 h-3.5 text-amber-400" />
+        <span>بانتظار لحظة الاكتمال...</span>
       </footer>
     </motion.section>
   );
