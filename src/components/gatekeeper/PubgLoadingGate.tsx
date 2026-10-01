@@ -330,7 +330,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
       </div>
 
       {/* ============================================================ */}
-      {/* 1. LEFT SLIDING BLAST DOOR (Width: 24vw, Height: 100vh)      */}
+      {/* 1. LEFT SLIDING BLAST DOOR (Width: 35vw, Height: 100vh)      */}
       {/* ============================================================ */}
       <motion.div
         initial={{ x: '-102%' }}
@@ -340,7 +340,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
             ? { duration: 0.6, ease: [0.32, 0, 0.67, 0] }
             : { duration: 0.75, ease: [0.16, 1, 0.3, 1] }
         }
-        className="absolute left-0 top-0 w-[24vw] h-full z-30 shadow-[8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
+        className="absolute left-0 top-0 w-[35vw] h-full z-30 shadow-[8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
         style={{
           backgroundColor: '#314056',
         }}
@@ -370,7 +370,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
           <img
             src={leftGateImg}
             alt="PUBG Gate Left"
-            className="h-full max-h-[500px] w-auto object-contain object-right block select-none pointer-events-none"
+            className="h-full max-h-[550px] w-auto object-contain object-right block select-none pointer-events-none"
           />
         </div>
 
@@ -385,7 +385,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
       </motion.div>
 
       {/* ============================================================ */}
-      {/* 2. RIGHT SLIDING BLAST DOOR (Width: 24vw, Height: 100vh)     */}
+      {/* 2. RIGHT SLIDING BLAST DOOR (Width: 35vw, Height: 100vh)     */}
       {/* ============================================================ */}
       <motion.div
         initial={{ x: '102%' }}
@@ -395,7 +395,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
             ? { duration: 0.6, ease: [0.32, 0, 0.67, 0] }
             : { duration: 0.75, ease: [0.16, 1, 0.3, 1] }
         }
-        className="absolute right-0 top-0 w-[24vw] h-full z-30 shadow-[-8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
+        className="absolute right-0 top-0 w-[35vw] h-full z-30 shadow-[-8px_0_30px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col justify-between"
         style={{
           backgroundColor: '#314056',
         }}
@@ -425,7 +425,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
           <img
             src={rightGateImg}
             alt="PUBG Gate Right"
-            className="h-full max-h-[500px] w-auto object-contain object-left block select-none pointer-events-none"
+            className="h-full max-h-[550px] w-auto object-contain object-left block select-none pointer-events-none"
           />
         </div>
 
@@ -440,7 +440,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
       </motion.div>
 
       {/* ============================================================ */}
-      {/* 3. MIDDLE TOP SHUTTER (Width: 52vw, Left: 24vw, Height: 50vh)*/}
+      {/* 3. MIDDLE TOP SHUTTER (Width: 30vw, Left: 35vw, Height: 50vh)*/}
       {/* ============================================================ */}
       <motion.div
         initial={{ y: '-102%' }}
@@ -456,7 +456,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
             ? { duration: 0.55, ease: [0.32, 0, 0.67, 0] }
             : { duration: 0.55, ease: [0.18, 0.89, 0.32, 1.08] }
         }
-        className="absolute left-[24vw] top-0 w-[52vw] h-[50vh] z-20 overflow-hidden flex flex-col justify-end shadow-[0_10px_25px_rgba(0,0,0,0.85)]"
+        className="absolute left-[35vw] top-0 w-[30vw] h-[50vh] z-20 overflow-hidden flex flex-col justify-end shadow-[0_10px_25px_rgba(0,0,0,0.85)]"
         style={{
           background: 'linear-gradient(180deg, #131921 0%, #202b37 60%, #3a4d5e 100%)',
         }}
@@ -488,7 +488,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
           <img
             src={midTopGateImg}
             alt="PUBG Gate Mid Top"
-            className="w-full max-h-[300px] object-contain object-bottom block select-none pointer-events-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
+            className="w-full h-auto object-contain object-bottom block select-none pointer-events-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]"
           />
         </div>
 
@@ -497,7 +497,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
       </motion.div>
 
       {/* ============================================================ */}
-      {/* 4. MIDDLE BOTTOM SHUTTER (Width: 52vw, Left: 24vw, Height: 50vh)*/}
+      {/* 4. MIDDLE BOTTOM SHUTTER (Width: 30vw, Left: 35vw, Height: 50vh)*/}
       {/* ============================================================ */}
       <motion.div
         initial={{ y: '102%' }}
@@ -513,7 +513,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
             ? { duration: 0.55, ease: [0.32, 0, 0.67, 0] }
             : { duration: 0.55, ease: [0.18, 0.89, 0.32, 1.08] }
         }
-        className="absolute left-[24vw] bottom-0 w-[52vw] h-[50vh] z-20 overflow-hidden flex flex-col justify-start shadow-[0_-10px_25px_rgba(0,0,0,0.85)]"
+        className="absolute left-[35vw] bottom-0 w-[30vw] h-[50vh] z-20 overflow-hidden flex flex-col justify-start shadow-[0_-10px_25px_rgba(0,0,0,0.85)]"
         style={{
           background: 'linear-gradient(0deg, #11171f 0%, #1c2734 60%, #344757 100%)',
         }}
@@ -526,7 +526,7 @@ export const PubgLoadingGate: React.FC<PubgLoadingGateProps> = ({
           <img
             src={midBottomGateImg}
             alt="PUBG Gate Mid Bottom"
-            className="w-full max-h-[300px] object-contain object-top block select-none pointer-events-none drop-shadow-[0_-4px_8px_rgba(0,0,0,0.5)]"
+            className="w-full h-auto object-contain object-top block select-none pointer-events-none drop-shadow-[0_-2px_6px_rgba(0,0,0,0.4)]"
           />
         </div>
 
