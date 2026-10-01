@@ -49,6 +49,22 @@ export const PALETTE_MOODS: PaletteMoodDef[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   // ==========================================
+  // Featured: Baby Photo
+  // Source: /assets/baby version of us.jpg
+  // ==========================================
+  {
+    id: 'art-baby',
+    title: 'نسختنا الصغيرة 👶',
+    category: 'her-art',
+    imageSrc: '/assets/baby version of us.jpg',
+    medium: 'تحسين وتوليف بالذكاء الاصطناعي • صورة طفولتينا',
+    date: 'البدايات — قبل أن نعرف بعضنا',
+    paletteColor: 'ochre-gold',
+    description: 'أخذت صورة طفولتكِ، حسّنتها وجمعتها مع صورتي بالذكاء الاصطناعي — لأصنع لحظة لم تحدث لكنني أتمنى لو حدثت. هذه ليست مجرد صورة، بل دليل على أن قلبي بحث عنكِ حتى في سنواتي الأولى.',
+    quote: '«لو التقينا طفلين، لكنت اخترتكِ أصدقائي الأول»',
+  },
+
+  // ==========================================
   // Category 1: "لوحات الغد" (Our Envisioned Story)
   // Source: /assets/A project/ai gen of us and our kids/
   // ==========================================
@@ -254,12 +270,159 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     date: 'شغف مستمر',
     paletteColor: 'burnt-sienna',
     description: 'لوحة تحبس الأنفاس بتناسقها الرائع، تكشف عن فنانة تمتلك عيناً استثنائية تلتقط الجمال حيث لا يراه الآخرون.',
-    quote: '«فخور بكِ وبكل قطرة لون وضعتها يداكِ»',
+    quote: 'فخور بكِ وبكل قطرة لون وضعتها يداكِ',
+  },
+
+  // ==========================================
+  // Her Moon Photo
+  // Source: /assets/her moon.png
+  // ==========================================
+  {
+    id: 'art-moon',
+    title: 'قمرها الذي رسمته العدسة',
+    category: 'her-art',
+    imageSrc: '/assets/her moon.png',
+    medium: 'تصوير فلكي - عدسة الفنانة',
+    date: '2026',
+    paletteColor: 'lapis',
+    description: 'لا اعرف ايهما اجمل، القمر نفسه ام انكِ انتِ من التقطه. نصفه مضيء ونصفه غامض، تماما مثلكِ؛ ظاهر من جمالكِ ما يبهر، وخفي منكِ ما يدهش اكثر.',
+    quote: 'التقطتِ القمر بعدستكِ، وانتِ وحدكِ من يستحق ان يصور',
+  },
+
+  // ==========================================
+  // Category 3: PUBG & Pixel Art
+  // Source: /assets/A project/pixle art and pubg/
+  // ==========================================
+  {
+    id: 'pubg-1',
+    title: 'نحن في ارقى ميدان',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.52 AM.jpeg',
+    medium: 'PUBG Mobile x Ferrari SF-25',
+    date: 'سبتمبر 2026',
+    paletteColor: 'burnt-sienna',
+    description: 'وقفنا معا امام السيارة الاسرع في العالم، وكان ذلك رمزا لنا؛ هكذا نحن دوما، جنبا الى جنب نتنافس ونتقدم معا، ولا تكتمل اي لحظة الا بحضور الاخر.',
+    quote: 'حتى في عالم السرعة، انتِ توقفي الزمن',
+  },
+  {
+    id: 'pubg-2',
+    title: 'لقطة الذكريات والزمن',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (1).jpeg',
+    medium: 'PUBG Mobile x Ferrari SF-25',
+    date: 'سبتمبر 2026',
+    paletteColor: 'burnt-sienna',
+    description: 'زاوية اخرى، نفس الشعور. في كل مرة ارى هذه الصورة، اتذكر ان اجمل اللحظات هي تلك التي نشاركها بعيدا عن اي ضغط، في فضاء لعبتنا المشتركة.',
+    quote: 'معكِ كل مكان يصبح وطنا',
+  },
+  {
+    id: 'pubg-3',
+    title: 'بكسل آرت على شاطئ القمر',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (2).jpeg',
+    medium: 'بكسل آرت - ليلة شاطئية',
+    date: '2026',
+    paletteColor: 'lapis',
+    description: 'شاطئ مضيء بالقمر، نار صغيرة تدفئ المكان، وانتِ تمسكين بيدي. هذه اللوحة البكسلية تختصر كل احلامنا؛ هدوء اللحظة وجمالها وبساطتها الساحرة تحت ضوء البدر.',
+    quote: 'ليالي الشاطئ اجمل حين يكون القمر شاهدا ونحن معا',
+  },
+  {
+    id: 'pubg-4',
+    title: 'ليلة النخيل والاسرار',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM (3).jpeg',
+    medium: 'بكسل آرت - مشهد ليلي',
+    date: '2026',
+    paletteColor: 'lapis',
+    description: 'شخصيتانا في ليلة بكسلية هادئة بين النخيل والبحر. اعشق هذه الايقونة التي تجمعنا في عالم صغير تصنعه البكسلات لكنه اكبر من اي واقع، لانكِ فيه.',
+    quote: 'في كل بكسل من هذه الصورة، معنى لا تسعه الكلمات',
+  },
+  {
+    id: 'pubg-5',
+    title: 'راحة المقعد الواحد',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.53 AM.jpeg',
+    medium: 'PUBG Mobile - لقطة ميدانية',
+    date: 'سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'لحظة هدوء بين المعارك، جلسنا على نفس المقعد بين اسلحتنا الموضوعة جانبا، لا يابه احدنا بالعالم من حوله. هذه لحظتي المفضلة؛ حين تسكت الميادين ونبقى نحن.',
+    quote: 'خير ما في الحرب، وقت الهدنة حين اراكِ',
+  },
+  {
+    id: 'pubg-6',
+    title: 'ثنائي لا يهزم',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.54 AM (1).jpeg',
+    medium: 'PUBG Mobile x Spider-Man',
+    date: 'سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'حتى بطولات الكون تعرف اسمينا. PUBG x Spider-Man، وكان لا بد ان نكون هناك معا. انتِ كنتِ دوما بطلتي قبل ان يصل اي ابطال خارقون.',
+    quote: 'انتِ اكثر خارقية من اي بطل رايته',
+  },
+  {
+    id: 'pubg-7',
+    title: 'وضعية الشريكين المميزة',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/WhatsApp Image 2026-09-04 at 10.50.54 AM (2).jpeg',
+    medium: 'PUBG Mobile - قائمة الشريك',
+    date: 'سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'حتى في اعدادات اللعبة وضعوا لنا خانة خاصة تسمى وضعية الشريكين المميزة، وكان المطورون يعرفون ان ثمة شريكين مميزين سيختارانها معا.',
+    quote: 'شريكتي المميزة في اللعبة والحياة',
+  },
+
+  // ==========================================
+  // New PUBG Photos - September 14, 2026
+  // Source: /assets/A project/pixle art and pubg/new pubg photos/
+  // ==========================================
+  {
+    id: 'pubg-8',
+    title: 'قنص القلوب لا الاعداء',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/new pubg photos/WhatsApp Image 2026-09-14 at 11.56.28 AM.jpeg',
+    medium: 'PUBG Mobile - قنص',
+    date: '13 سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'وراء المنظار المضخم يجلس القناص المتقن، لكن اكثر ما اقنصه اخلاصا هو قلبكِ، وهو الهدف الوحيد الذي لا اتخيل تفويته. اسماؤنا معا في اعلى الشاشة دليل.',
+    quote: 'رصاصتي الادق مسافة كانت نحو قلبكِ',
+  },
+  {
+    id: 'pubg-9',
+    title: 'بقينا 77 وبقينا معا',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/new pubg photos/WhatsApp Image 2026-09-14 at 11.56.28 AM (1).jpeg',
+    medium: 'PUBG Mobile - ديو',
+    date: '10 سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'في الدائرة الاخيرة حين يتبقى 77 شخصا، كنا معا فوق منصة الطائر الذهبي. لا يهمني الفوز بالمعركة، يهمني فقط ان اسمعكِ تضحكين حين ننجو معا.',
+    quote: 'في كل حلقة ضيقة، انتِ امانتي الوحيدة',
+  },
+  {
+    id: 'pubg-10',
+    title: 'تلفريك وانتِ امان السماء',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/new pubg photos/WhatsApp Image 2026-09-14 at 11.56.29 AM.jpeg',
+    medium: 'PUBG Mobile - مغامرة',
+    date: '10 سبتمبر 2026',
+    paletteColor: 'lapis',
+    description: 'معلقان في التلفريك فوق الميدان وامامنا كل الاعداء، لكن بجانبكِ اشعر انني في أمن مكان على وجه الارض. الخطر لا يخيفني، وغيابكِ هو الشيء الوحيد الذي يفعله.',
+    quote: 'حتى حين نطير، انتِ التي تمسك بي',
+  },
+  {
+    id: 'pubg-11',
+    title: 'اماني في منزلها الاسطوري',
+    category: 'pixel-pubg',
+    imageSrc: '/assets/A project/pixle art and pubg/new pubg photos/WhatsApp Image 2026-09-14 at 11.56.54 AM.jpeg',
+    medium: 'PUBG Mobile - ملف اللاعبة',
+    date: 'سبتمبر 2026',
+    paletteColor: 'ochre-gold',
+    description: 'منزل اماني، المستوى 46، 2165 متابع، 203 اعجاب. لكن اكثر ما يلفت نظري هو ليس الارقام، بل انه مكتوب بجانب اسمها محبوب ذلك هو الاوصف على الاطلاق.',
+    quote: 'ملفكِ يقول محبوب، وانا من يعرف لماذا اكثر من اي احد',
   },
 ];
 
 export const CATEGORY_LABELS: Record<
-  'future' | 'her-art',
+  'future' | 'her-art' | 'pixel-pubg',
   { titleAr: string; subtitleAr: string; icon: string; tagTheme: string }
 > = {
   'her-art': {
@@ -273,6 +436,12 @@ export const CATEGORY_LABELS: Record<
     subtitleAr: 'حكايتنا المتخيلة وخطوات الغد المشترك',
     icon: '✨',
     tagTheme: 'border-amber-700/60 bg-gradient-to-b from-[#2d1b10] to-[#1a0f08] text-amber-200',
+  },
+  'pixel-pubg': {
+    titleAr: 'ذكريات البكسل والميدان',
+    subtitleAr: 'لحظاتنا في PUBG وعالم البكسل',
+    icon: '🎮',
+    tagTheme: 'border-blue-700/60 bg-gradient-to-b from-[#0d1b2a] to-[#0a1520] text-blue-100',
   },
 };
 

@@ -7,11 +7,14 @@ import { BloomingFlower } from '@/components/effects/BloomingFlower';
 import { BloomingRose } from '@/components/ui/BloomingRose';
 import { Heart, Lock, KeyRound, Sparkles, CheckCircle2 } from 'lucide-react';
 
+import { PubgLoadingGate } from '@/components/gatekeeper/PubgLoadingGate';
+
 export const LoginScreen: React.FC = () => {
   const { unlock } = useApp();
   const [inputPassword, setInputPassword] = useState('');
   const [hasError, setHasError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [showPubgGate, setShowPubgGate] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,9 +27,8 @@ export const LoginScreen: React.FC = () => {
     if (trimmedInput === expectedPassword || (expectedPassword === 'YOUR_PASSWORD_HERE' && trimmedInput.length > 0)) {
       setIsSuccess(true);
       setHasError(false);
-      setTimeout(() => {
-        unlock();
-      }, 1200);
+      // Trigger the PUBG blast gate loading screen animation
+      setShowPubgGate(true);
     } else {
       setHasError(true);
       setErrorMessage('الاسم غير متطابق تماماً.. تأكدي من الحروف والرموز التعبيرية 💕');
@@ -56,9 +58,20 @@ export const LoginScreen: React.FC = () => {
             FOR AMANI • لأماني
           </span>
         </div>
-        <div className="flex items-center gap-1 text-xs text-amber-300/80 font-cairo px-3 py-1 rounded-full bg-stone-900/60 border border-amber-500/30">
-          <Lock className="w-3.5 h-3.5 text-amber-400" />
-          <span>بوابة الدخول</span>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setShowPubgGate(true)}
+            className="flex items-center gap-1.5 text-xs text-amber-300/90 hover:text-amber-200 font-cairo px-2.5 py-1 rounded-full bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all cursor-pointer"
+            title="معاينة أنيميشن بوابة PUBG"
+          >
+            <span>🛡️</span>
+            <span className="hidden sm:inline">معاينة البوابة</span>
+          </button>
+          <div className="flex items-center gap-1 text-xs text-amber-300/80 font-cairo px-3 py-1 rounded-full bg-stone-900/60 border border-amber-500/30">
+            <Lock className="w-3.5 h-3.5 text-amber-400" />
+            <span>بوابة الدخول</span>
+          </div>
         </div>
       </header>
 
@@ -158,6 +171,16 @@ export const LoginScreen: React.FC = () => {
       <footer className="relative z-20 flex items-center gap-2 pb-4 text-xs font-cairo text-rose-400/60">
         <span>مُهداة بكل نبضة حب</span>
       </footer>
+
+      {/* PUBG Blast Gate Loading Screen Animation */}
+      {showPubgGate && (
+        <PubgLoadingGate
+          playerName="أماني 💕"
+          onComplete={() => {
+            unlock();
+          }}
+        />
+      )}
     </motion.section>
   );
 };

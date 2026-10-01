@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { WORLDS, type WorldDef } from '@/data/config';
 import { useApp } from '@/context/AppContext';
 import { FloatingFlowers3D } from '@/components/effects/FloatingFlowers3D';
+import { SecretArcadeLink } from '@/components/ui/SecretArcadeLink';
 import { Sparkles, ArrowLeft, Heart, RefreshCw } from 'lucide-react';
 
 export const WorldHub: React.FC = () => {
@@ -134,9 +135,14 @@ export const WorldHub: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-20 w-full max-w-4xl mx-auto pt-6 text-center text-xs font-cairo text-emerald-400/60 flex items-center justify-center gap-1.5">
-        <Heart className="w-3.5 h-3.5 text-rose-400 fill-current opacity-75" />
-        <span>صُنعت خصيصاً لأماني — كل عام وأنتِ الأجمل</span>
+      <footer className="relative z-20 w-full max-w-4xl mx-auto pt-6 pb-2 text-center text-xs font-cairo text-emerald-400/60 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="flex items-center justify-center gap-1.5">
+          <Heart className="w-3.5 h-3.5 text-rose-400 fill-current opacity-75" />
+          <span>صُنعت خصيصاً لأماني — كل عام وأنتِ الأجمل</span>
+        </div>
+
+        {/* Secret Arcade Link */}
+        <SecretArcadeLink />
       </footer>
     </motion.div>
   );
