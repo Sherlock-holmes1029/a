@@ -110,7 +110,7 @@ export const LoginScreen: React.FC = () => {
                   className="block text-xs font-bold font-cairo text-rose-300 mb-2 flex items-center gap-1.5"
                 >
                   <KeyRound className="w-3.5 h-3.5 text-amber-400" />
-                  <span>ما هو اسمي عندكِ على إنستغرام؟ 💕</span>
+                  <span>ما هو الاسم الأول الذي أطلقتَه عليَّ في instagram ؟ 💕</span>
                 </label>
 
                 <input
